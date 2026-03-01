@@ -1,6 +1,7 @@
 import { useStore } from '@tanstack/react-store'
 import {
   Github,
+  Instagram,
   Linkedin,
   LucideBug,
   LucideCog,
@@ -76,6 +77,12 @@ export function Editor() {
                   icon: Github,
                   onClick: () =>
                     window.open('https://github.com/madilima', '_blank')
+                },
+                {
+                  label: 'Insagram',
+                  icon: Instagram,
+                  onClick: () =>
+                    window.open('https://www.instagram.com/m_itsm3/', '_blank')
                 }
               ]
             },
