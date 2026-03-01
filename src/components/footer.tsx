@@ -8,7 +8,7 @@ export function Footer() {
       className="hover: flex h-6 w-full items-center justify-end gap-1 border-zinc-700 border-t px-3 text-[#8F8CA8]"
     >
       <a
-        href="/"
+        href="https://github.com/madilima/vscode-portfolio"
         className="flex items-center gap-1 text-xs hover:text-[#E0DEF2]"
       >
         <Github size={12} />
