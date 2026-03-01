@@ -55,7 +55,7 @@ export const appStore = new Store<AppStore>({
           icon: LucideFileJson,
           name: 'projects.json',
           isCurrent: false,
-          isOpen: true,
+          isOpen: false,
           content: projects,
           language: 'json'
         },

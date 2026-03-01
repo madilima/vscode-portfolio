@@ -1,5 +1,7 @@
 import { useStore } from '@tanstack/react-store'
 import {
+  Github,
+  Linkedin,
   LucideBug,
   LucideCog,
   LucideFiles,
@@ -45,8 +47,29 @@ export function Editor() {
             { icon: LucideFlaskConical, id: 'tests', isSelected: false }
           ]}
           footerItems={[
-            { icon: LucideUser, id: 'files', isSelected: false },
-            { icon: LucideCog, id: 'search', isSelected: false }
+            {
+              icon: LucideUser,
+              id: 'user',
+              isSelected: false,
+              items: [
+                {
+                  label: 'LinkedIn',
+                  icon: Linkedin,
+                  onClick: () =>
+                    window.open(
+                      'https://www.linkedin.com/in/madi-pereira/',
+                      '_blank'
+                    )
+                },
+                {
+                  label: 'GitHub',
+                  icon: Github,
+                  onClick: () =>
+                    window.open('https://github.com/madilima', '_blank')
+                }
+              ]
+            },
+            { icon: LucideCog, id: 'settings', isSelected: false }
           ]}
         />
 
