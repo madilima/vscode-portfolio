@@ -28,7 +28,7 @@ export function Section(props: SectionProps) {
       </button>
 
       <Activity mode={isOpen ? 'visible' : 'hidden'}>
-        <div className='pl-2'>{children}</div>
+        <div className="pl-2">{children}</div>
       </Activity>
     </div>
   )

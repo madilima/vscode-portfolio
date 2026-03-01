@@ -1,7 +1,7 @@
 import { Editor } from './components/editor'
 import { injectOneko } from './scripts/inject-oneko'
 
-// injectOneko();
+injectOneko()
 
 export function App() {
   return (

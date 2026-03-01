@@ -14,6 +14,7 @@ import { Explorer } from './explorer'
 import { Footer } from './footer'
 import { MainWindow } from './main-window'
 import { Sidebar } from './sidebar'
+import { Tabs } from './tabs'
 import { WindowFrame } from './window-frame'
 
 export function Editor() {
@@ -39,6 +40,8 @@ export function Editor() {
         />
 
         <Explorer />
+
+        <Tabs />
       </div>
 
       <Footer />
