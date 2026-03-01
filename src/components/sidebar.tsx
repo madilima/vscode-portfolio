@@ -17,7 +17,7 @@ export function Sidebar(props: SidebarProps) {
   const { items, footerItems } = props
 
   return (
-    <div className="flex w-14 flex-1 grow flex-col justify-between border-zinc-700 border-r">
+    <div className="flex min-w-14 max-w-14 flex-1 grow flex-col justify-between border-zinc-700 border-r">
       <div className="flex flex-col">
         {items.map(item => {
           const Icon = item.icon

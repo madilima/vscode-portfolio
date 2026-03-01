@@ -1,3 +1,4 @@
+import { useStore } from '@tanstack/react-store'
 import {
   LucideBug,
   LucideCog,
@@ -10,6 +11,8 @@ import {
   LucideUser
 } from 'lucide-react'
 
+import { appStore } from '../lib/app-store'
+import { Code } from './code'
 import { Explorer } from './explorer'
 import { Footer } from './footer'
 import { MainWindow } from './main-window'
@@ -18,11 +21,17 @@ import { Tabs } from './tabs'
 import { WindowFrame } from './window-frame'
 
 export function Editor() {
+  const currentFile = useStore(appStore, store => {
+    return store.folders
+      .flatMap(folder => folder.files)
+      .find(file => file.isCurrent)
+  })
+
   return (
     <MainWindow>
-      <WindowFrame title="batatinha.tsx" />
+      <WindowFrame title={currentFile? `${currentFile.name} — madilima` : 'madilima'} />
 
-      <div className="flex grow self-start">
+      <div className="flex flex-1 grow">
         <Sidebar
           items={[
             { icon: LucideFiles, id: 'files', isSelected: true },
@@ -41,7 +50,14 @@ export function Editor() {
 
         <Explorer />
 
-        <Tabs />
+        <div className="flex grow flex-col">
+          <Tabs />
+
+          <Code
+            content={currentFile?.content}
+            language={currentFile?.language}
+          />
+        </div>
       </div>
 
       <Footer />

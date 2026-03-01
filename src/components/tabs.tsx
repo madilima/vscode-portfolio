@@ -10,6 +10,10 @@ export function Tabs() {
       .filter(file => file.isOpen)
   })
 
+  if(openFiles.length === 0) {
+    return null
+  }
+
   return (
     <div className="flex h-9 flex-row text-sm">
       {openFiles.map(file => {
