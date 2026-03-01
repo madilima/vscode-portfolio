@@ -26,11 +26,20 @@ export function Explorer() {
 
   const folders = useStore(appStore, store => store.folders)
 
+  const isExplorerCollapsed = useStore(
+    appStore,
+    store => store.isExplorerCollapsed
+  )
+
+  if (isExplorerCollapsed) {
+    return null
+  }
+
   return (
-    <div className="w-64 border-zinc-700 border-r px-4 py-2 text-[#8F8CA8]">
+    <div className="w-64 border-zinc-700 border-r px-2 py-2 text-[#8F8CA8]">
       <strong className="flex items-center justify-between pl-2 font-medium text-xs">
         EXPLORER
-        <LucideMoreHorizontal size={16} />
+        <LucideMoreHorizontal size={16} className="mr-2" />
       </strong>
       <nav className="mt-4 flex flex-col">
         <Section

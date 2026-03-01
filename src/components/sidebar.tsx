@@ -9,6 +9,7 @@ type SidebarItem = {
   id: string
   icon: IconType
   isSelected: boolean
+  onClick?: () => void
   items?: {
     label: string
     icon: IconType
@@ -33,9 +34,10 @@ export function Sidebar(props: SidebarProps) {
         className={classNames(
           'flex h-12 items-center justify-center border-transparent border-l-2 data-[active=true]:border-[#E0DEF2]',
           {
-            'cursor-pointer': !!item.items
+            'cursor-pointer': !!item.items || !!item.onClick
           }
         )}
+        onClick={item.onClick}
       >
         <Icon
           data-selected={item.isSelected}

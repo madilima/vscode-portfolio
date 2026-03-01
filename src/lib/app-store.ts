@@ -22,10 +22,12 @@ type Folder = {
 }
 
 type AppStore = {
+  isExplorerCollapsed: boolean
   folders: Array<Folder>
 }
 
 export const appStore = new Store<AppStore>({
+  isExplorerCollapsed: false,
   folders: [
     {
       files: [

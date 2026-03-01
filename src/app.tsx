@@ -5,7 +5,7 @@ injectOneko()
 
 export function App() {
   return (
-    <div className="relative z-10 flex h-screen items-center justify-center p-20">
+    <div className="relative z-10 flex h-screen items-center justify-center p-20 max-xl:p-2">
       <Editor />
     </div>
   )

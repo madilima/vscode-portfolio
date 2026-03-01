@@ -38,7 +38,17 @@ export function Editor() {
       <div className="flex flex-1 grow">
         <Sidebar
           items={[
-            { icon: LucideFiles, id: 'files', isSelected: true },
+            {
+              icon: LucideFiles,
+              id: 'files',
+              isSelected: true,
+              onClick: () => {
+                appStore.setState(prev => ({
+                  ...prev,
+                  isExplorerCollapsed: !prev.isExplorerCollapsed
+                }))
+              }
+            },
             { icon: LucideSearch, id: 'search', isSelected: false },
             { icon: LucideGitFork, id: 'gitfork', isSelected: false },
             { icon: LucideBug, id: 'bug', isSelected: false },
