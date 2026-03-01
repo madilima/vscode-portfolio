@@ -3,7 +3,7 @@ import { getSingletonHighlighter } from 'shiki'
 
 interface CodeProps {
     content?: string
-    language?: 'json'
+    language?: 'json' | 'markdown'
 }
 
 export function Code(props: CodeProps) {
@@ -22,7 +22,7 @@ export function Code(props: CodeProps) {
 
       const highlighter = await getSingletonHighlighter({
         themes: ['github-dark'],
-        langs: [language],
+        langs: [language,],
       })
 
       const code = highlighter.codeToHtml(content, {

@@ -2,11 +2,11 @@ import { Store } from '@tanstack/react-store'
 import { LucideFileJson } from 'lucide-react'
 
 import contacts from '../assets/contacts.json?raw'
-import me from '../assets/me.json?raw'
+import me from '../assets/me.md?raw'
 
 type File = {
   content: string
-  language: 'json'
+  language: 'json' | 'markdown'
   name: string
   icon: typeof LucideFileJson
   isCurrent: boolean
@@ -29,11 +29,11 @@ export const appStore = new Store<AppStore>({
       files: [
         {
           icon: LucideFileJson,
-          name: 'me.json',
+          name: 'me.md',
           isCurrent: true,
           isOpen: true,
           content: me,
-          language: 'json'
+          language: 'markdown'
         },
         {
           icon: LucideFileJson,
@@ -45,6 +45,28 @@ export const appStore = new Store<AppStore>({
         }
       ],
       name: 'About',
+      isOpen: true
+    },
+    {
+      files: [
+        {
+          icon: LucideFileJson,
+          name: 'projects.json',
+          isCurrent: true,
+          isOpen: true,
+          content: me,
+          language: 'json'
+        },
+        {
+          icon: LucideFileJson,
+          name: 'education.json',
+          isCurrent: false,
+          isOpen: false,
+          content: contacts,
+          language: 'json'
+        }
+      ],
+      name: 'Projects',
       isOpen: true
     }
   ]
