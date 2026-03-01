@@ -29,7 +29,9 @@ export function Editor() {
 
   return (
     <MainWindow>
-      <WindowFrame title={currentFile? `${currentFile.name} — madilima` : 'madilima'} />
+      <WindowFrame
+        title={currentFile ? `${currentFile.name} — madilima` : 'madilima'}
+      />
 
       <div className="flex flex-1 grow">
         <Sidebar

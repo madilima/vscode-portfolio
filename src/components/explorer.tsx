@@ -3,6 +3,7 @@ import { LucideMoreHorizontal } from 'lucide-react'
 import { useState } from 'react'
 
 import { appStore } from '../lib/app-store'
+import { closeFile } from '../utils/close-file'
 import { File } from './file'
 import { Folder } from './folder'
 import { Section } from './section'
@@ -15,6 +16,12 @@ export function Explorer() {
     return store.folders
       .flatMap(folder => folder.files)
       .find(file => file.isCurrent)
+  })
+
+  const openFiles = useStore(appStore, store => {
+    return store.folders
+      .flatMap(folder => folder.files)
+      .filter(file => file.isOpen)
   })
 
   const folders = useStore(appStore, store => store.folders)
@@ -30,7 +37,38 @@ export function Explorer() {
           isOpen={isOpenEditorsOpen}
           onOpenChange={setIsOpenEditorsOpen}
           title="Open editors"
-        ></Section>
+        >
+          {openFiles.map(file => (
+            <File
+              closeable
+              onClose={() => closeFile(file.name)}
+              key={file.name}
+              name={file.name}
+              isActive={currentFile?.name === file.name}
+              onClick={() => {
+                appStore.setState(prev => ({
+                  ...prev,
+                  folders: prev.folders.map(folder => ({
+                    ...folder,
+                    files: folder.files.map(f => {
+                      if (f.name === file.name) {
+                        return {
+                          ...f,
+                          isCurrent: true,
+                          isOpen: true
+                        }
+                      }
+                      return {
+                        ...f,
+                        isCurrent: false
+                      }
+                    })
+                  }))
+                }))
+              }}
+            />
+          ))}
+        </Section>
 
         <Section
           isOpen={isProjectOpen}
@@ -45,10 +83,16 @@ export function Explorer() {
               onOpenChange={isOpen => {
                 appStore.setState(prev => ({
                   ...prev,
-                  folders: prev.folders.map(f => ({
-                    ...f,
-                    isOpen
-                  }))
+                  folders: prev.folders.map(f => {
+                    if (folder.name === f.name) {
+                      return {
+                        ...f,
+                        isOpen
+                      }
+                    }
+
+                    return f
+                  })
                 }))
               }}
             >

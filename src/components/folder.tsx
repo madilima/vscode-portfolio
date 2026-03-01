@@ -19,7 +19,7 @@ export function Folder(props: FolderProps) {
     <div>
       <button
         onClick={() => onOpenChange(!isOpen)}
-        className="flex w-full items-center gap-2 border border-transparent px-2 py-1 hover:bg-[#2a273f] hover:text-[#E0DEF2] focus:border-[#363247] focus:bg-[#2a273f] focus:text-[#E0DEF2]"
+        className="flex w-full items-center gap-2 border border-transparent px-2 py-1 hover:bg-slate-5 hover:text-[#E0DEF2] focus:border-slate-4 focus:bg-slate-5 focus:text-[#E0DEF2]"
       >
         {isOpen ? (
           <LucideChevronDown size={20} />

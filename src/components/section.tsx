@@ -17,7 +17,7 @@ export function Section(props: SectionProps) {
       <button
         onClick={() => onOpenChange(!isOpen)}
         type="button"
-        className="flex w-full items-center gap-2 border border-transparent border-t-[#817c9c26] px-1 py-1 focus:border-[#363247]"
+        className="flex w-full items-center gap-2 border border-transparent border-t-slate-5 px-1 py-1 focus:border-slate-5"
       >
         {isOpen ? (
           <LucideChevronDown size={20} />

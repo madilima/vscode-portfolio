@@ -2,8 +2,8 @@ import { useEffect, useState } from 'react'
 import { getSingletonHighlighter } from 'shiki'
 
 interface CodeProps {
-    content?: string
-    language?: 'json' | 'markdown'
+  content?: string
+  language?: 'json' | 'markdown'
 }
 
 export function Code(props: CodeProps) {
@@ -11,18 +11,17 @@ export function Code(props: CodeProps) {
 
   const { content, language } = props
 
-
   useEffect(() => {
     async function process() {
-        if(!content || !language) {
-            setProcessedCode('')
+      if (!content || !language) {
+        setProcessedCode('')
 
-            return
-        }
+        return
+      }
 
       const highlighter = await getSingletonHighlighter({
         themes: ['github-dark'],
-        langs: [language,],
+        langs: [language]
       })
 
       const code = highlighter.codeToHtml(content, {
@@ -37,7 +36,7 @@ export function Code(props: CodeProps) {
   }, [content, language])
 
   return (
-    <div className='relative flex flex-1 grow bg-[#24292e]'>
+    <div className="relative flex flex-1 grow bg-[#24292e]">
       <div
         id="shiki-code"
         dangerouslySetInnerHTML={{ __html: processedCode }}

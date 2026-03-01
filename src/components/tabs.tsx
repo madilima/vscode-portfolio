@@ -1,6 +1,7 @@
 import { useStore } from '@tanstack/react-store'
 
 import { appStore } from '../lib/app-store'
+import { closeFile } from '../utils/close-file'
 import { Tab } from './tab'
 
 export function Tabs() {
@@ -10,7 +11,7 @@ export function Tabs() {
       .filter(file => file.isOpen)
   })
 
-  if(openFiles.length === 0) {
+  if (openFiles.length === 0) {
     return null
   }
 
@@ -19,7 +20,8 @@ export function Tabs() {
       {openFiles.map(file => {
         return (
           <Tab
-            onClose={() => {
+            onClose={() => closeFile(file.name)}
+            onClick={() => {
               appStore.setState(prev => ({
                 ...prev,
                 folders: prev.folders.map(folder => ({
@@ -28,11 +30,13 @@ export function Tabs() {
                     if (f.name === file.name) {
                       return {
                         ...f,
-                        isCurrent: false,
-                        isOpen: false
+                        isCurrent: true
                       }
                     }
-                    return f
+                    return {
+                      ...f,
+                      isCurrent: false
+                    }
                   })
                 }))
               }))
