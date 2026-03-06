@@ -1,3 +1,20 @@
 {
-  "email": "madulpereira28@gmail.com"
+  "email": {
+    "primary": "madulpereira28@gmail.com",
+    "secondary": "madulpereira28@hotmail.com"
+  },
+
+  "number": {
+    "forWorkContact": "+5551999040062"
+  },
+
+  "gitHub": {
+    "primaryAccount": "https://github.com/madilima"
+  },
+
+  "linkedIn": {
+    "onlyAccount": "https://www.linkedin.com/in/madi-pereira/"
+  },
+
+  "redirectButton": "on the --user-button"
 }

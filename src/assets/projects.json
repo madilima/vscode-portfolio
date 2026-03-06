@@ -1,1 +1,35 @@
-{}
+{
+  "projects-java": {
+    "senhor-dos-aneis": {
+      "src": "https://github.com/madilima/senhor-dos-aneis"
+    },
+    "gestao-vagas-back": {
+      "src": "https://github.com/madilima/gestao_vagas"
+    }
+  },
+  "projects-javascript": {
+    "support-ticket-back": {
+      "src": "https://github.com/madilima/support-ticket"
+    },
+    "hairday": {
+      "src": "https://github.com/madilima/hairday",
+      "url": "http://dayforhair.madu.dev//"
+    },
+    "convert": {
+      "src": "https://github.com/madilima/convert",
+      "url": "https://convert.madu.dev/"
+    }
+  },
+  "projects-typescript": {
+    "refund-system-front": {
+      "src": "https://github.com/madilima/refund-system",
+      "url": "https://refundsystem.madu.dev/"
+    },
+    "refund-system-back": {
+      "src": "https://github.com/madilima/refund-system-backend"
+    },
+    "rocketlog-back": {
+      "src": "https://github.com/madilima/rocketlog"
+    }
+  }
+}

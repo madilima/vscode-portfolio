@@ -1,1 +1,18 @@
-{}
+{
+  "university": {
+    "currentCourse": {
+      "systemsAnalysisAndDevelopment": "--conclusion -july 2027"
+    },
+    "lastCourse": {
+      "administration": "finished"
+    }
+  },
+
+  "courses": {
+    "certifiedIn": ["FULLSTACK", "JAVASCRIPT", "REACT", "DATABASE", "JAVA"],
+
+    "Language": ["ENGLISH", "SPANISH"],
+
+    "currentCourses": ["ANGULAR", "C#", "DATA_ANALYTICS"]
+  }
+}

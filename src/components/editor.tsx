@@ -11,7 +11,9 @@ import {
   LucideMonitor,
   LucidePuzzle,
   LucideSearch,
-  LucideUser
+  LucideUser,
+  Mail,
+  MessagesSquare
 } from 'lucide-react'
 
 import { appStore } from '../lib/app-store'
@@ -79,7 +81,19 @@ export function Editor() {
                     window.open('https://github.com/madilima', '_blank')
                 },
                 {
-                  label: 'Insagram',
+                  label: 'Whatsapp',
+                  icon: MessagesSquare,
+                  onClick: () =>
+                    window.open('https://whatsa.me/5551999040062', '_blank')
+                },
+                {
+                  label: 'Email',
+                  icon: Mail,
+                  onClick: () =>
+                    window.open('mailto:madulpereira28@gmail.com', '_blank')
+                },
+                {
+                  label: 'Instagram',
                   icon: Instagram,
                   onClick: () =>
                     window.open('https://www.instagram.com/m_itsm3/', '_blank')

@@ -35,3 +35,6 @@ code .line::before {
   text-align: right;
   color: #8f8ca8;
 }
+.invisible-scrollbar::-webkit-scrollbar {
+  display: none;
+}

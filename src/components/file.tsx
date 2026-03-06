@@ -1,5 +1,5 @@
 import classNames from 'classnames'
-import { LucideFileJson, X } from 'lucide-react'
+import { FileCodeCorner, X } from 'lucide-react'
 
 interface FileProps {
   name: string
@@ -38,7 +38,7 @@ export function File(props: FileProps) {
           </button>
         )}
 
-        <LucideFileJson size={16} />
+        <FileCodeCorner size={16} />
         <span className="text-sm">{name}</span>
       </button>
     </div>

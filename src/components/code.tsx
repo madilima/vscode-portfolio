@@ -40,7 +40,7 @@ export function Code(props: CodeProps) {
       <div
         id="shiki-code"
         dangerouslySetInnerHTML={{ __html: processedCode }}
-        className="scrollbar scrollbar-thumb-[#2B283B] scrollbar-track-transparent absolute inset-0 overflow-auto leading-relaxed"
+        className="invisible-scrollbar absolute inset-0 overflow-auto leading-relaxed"
       />
     </div>
   )

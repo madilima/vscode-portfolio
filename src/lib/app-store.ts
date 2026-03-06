@@ -1,5 +1,5 @@
 import { Store } from '@tanstack/react-store'
-import { LucideFileJson } from 'lucide-react'
+import { Braces, LucideFileJson } from 'lucide-react'
 
 import contacts from '../assets/contacts.json?raw'
 import education from '../assets/education.json?raw'
@@ -10,7 +10,7 @@ type File = {
   content: string
   language: 'json' | 'markdown'
   name: string
-  icon: typeof LucideFileJson
+  icon: typeof Braces
   isCurrent: boolean
   isOpen: boolean
 }
@@ -40,7 +40,7 @@ export const appStore = new Store<AppStore>({
           language: 'markdown'
         },
         {
-          icon: LucideFileJson,
+          icon: Braces,
           name: 'contacts.json',
           isCurrent: false,
           isOpen: false,
@@ -54,7 +54,7 @@ export const appStore = new Store<AppStore>({
     {
       files: [
         {
-          icon: LucideFileJson,
+          icon: Braces,
           name: 'projects.json',
           isCurrent: false,
           isOpen: false,
@@ -62,7 +62,7 @@ export const appStore = new Store<AppStore>({
           language: 'json'
         },
         {
-          icon: LucideFileJson,
+          icon: Braces,
           name: 'education.json',
           isCurrent: false,
           isOpen: false,
