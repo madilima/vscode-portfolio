@@ -3,7 +3,7 @@
 - I am 23 years old.
 - I live in Rio Grande do Sul, Brazil.
 - I am a student of Systems Analysis and Development.
-- I have a strong interest in Front-End Development, Design and Support.
+- I have a strong interest in Front-End Development and Design.
 
 
 ## Knowledge
