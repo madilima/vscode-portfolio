@@ -1,35 +1,53 @@
-{
-  "projects-java": {
-    "senhor-dos-aneis": {
-      "src": "https://github.com/madilima/senhor-dos-aneis"
-    },
-    "gestao-vagas-back": {
-      "src": "https://github.com/madilima/gestao_vagas"
-    }
+[
+  {
+    "name": "SENHOR DOS ANÉIS",
+    "description": " ",
+    "technologies": ["Java"],
+    "source": "https://github.com/madilima/senhor-dos-aneis"
   },
-  "projects-javascript": {
-    "support-ticket-back": {
-      "src": "https://github.com/madilima/support-ticket"
-    },
-    "hairday": {
-      "src": "https://github.com/madilima/hairday",
-      "url": "http://dayforhair.madu.dev//"
-    },
-    "convert": {
-      "src": "https://github.com/madilima/convert",
-      "url": "https://convert.madu.dev/"
-    }
+  {
+    "name": "GESTÃO DE VAGAS BACKEND",
+    "description": " ",
+    "technologies": ["Java", "Spring"],
+    "source": "https://github.com/madilima/gestao_vagas"
   },
-  "projects-typescript": {
-    "refund-system-front": {
-      "src": "https://github.com/madilima/refund-system",
-      "url": "https://refundsystem.madu.dev/"
-    },
-    "refund-system-back": {
-      "src": "https://github.com/madilima/refund-system-backend"
-    },
-    "rocketlog-back": {
-      "src": "https://github.com/madilima/rocketlog"
-    }
+  {
+    "name": "SUPPORT TICKET",
+    "description": " ",
+    "technologies": ["JavaScript", "Node.js", "Express"],
+    "source": "https://github.com/madilima/support-ticket"
+  },
+  {
+    "name": "HAIRDAY",
+    "description": " ",
+    "technologies": ["JavaScript", "Node.js", "Express", "React"],
+    "source": "https://github.com/madilima/hairday",
+    "url": "http://dayforhair.madu.dev"
+  },
+  {
+    "name": "CONVERT",
+    "description": " ",
+    "technologies": ["JavaScript", "Node.js", "Express", "React"],
+    "source": "https://convert.madu.dev",
+    "url": "https://convert.madu.dev"
+  },
+  {
+    "name": "ROCKETLOG BACKEND",
+    "description": " ",
+    "technologies": ["TypeScript", "Node.js", "Express"],
+    "source": "https://github.com/madilima/rocketlog"
+  },
+  {
+    "name": "REFUND SYSTEM BACKEND",
+    "description": " ",
+    "technologies": ["TypeScript", "Node.js", "Express"],
+    "source": "https://github.com/madilima/refund-system-backend"
+  },
+  {
+    "name": "REFUND SYSTEM FRONTEND",
+    "description": " ",
+    "technologies": ["TypeScript", "React"],
+    "source": "https://refundsystem.madu.dev",
+    "url": "https://refundsystem.madu.dev"
   }
-}
+]

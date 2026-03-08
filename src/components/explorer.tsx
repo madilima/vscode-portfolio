@@ -49,6 +49,7 @@ export function Explorer() {
         >
           {openFiles.map(file => (
             <File
+              icon={file.icon}
               closeable
               onClose={() => closeFile(file.name)}
               key={file.name}
@@ -74,8 +75,7 @@ export function Explorer() {
                     })
                   }))
                 }))
-              }}
-            />
+              } }/>
           ))}
         </Section>
 
@@ -107,6 +107,7 @@ export function Explorer() {
             >
               {folder.files.map(file => (
                 <File
+                  icon={file.icon}
                   key={file.name}
                   name={file.name}
                   isActive={currentFile?.name === file.name}

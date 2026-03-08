@@ -1,5 +1,5 @@
 import classNames from 'classnames'
-import { FileCodeCorner, X } from 'lucide-react'
+import { type FileCodeCorner, X } from 'lucide-react'
 
 interface FileProps {
   name: string
@@ -7,10 +7,11 @@ interface FileProps {
   onClick: () => void
   closeable?: boolean
   onClose?: () => void
+  icon: typeof FileCodeCorner
 }
 
 export function File(props: FileProps) {
-  const { name, isActive, onClick, closeable, onClose } = props
+  const { name, isActive, onClick, closeable, onClose, icon: Icon } = props
 
   return (
     <div>
@@ -38,7 +39,7 @@ export function File(props: FileProps) {
           </button>
         )}
 
-        <FileCodeCorner size={16} />
+        <Icon size={16} />
         <span className="text-sm">{name}</span>
       </button>
     </div>

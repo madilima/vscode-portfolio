@@ -4,17 +4,9 @@
     "secondary": "madulpereira28@hotmail.com"
   },
 
-  "number": {
-    "forWorkContact": "+5551999040062"
-  },
+  "phoneNumber": "+55 (51) 99904-0062",
 
-  "gitHub": {
-    "primaryAccount": "https://github.com/madilima"
-  },
+  "gitHub": "https://github.com/madilima",
 
-  "linkedIn": {
-    "onlyAccount": "https://www.linkedin.com/in/madi-pereira/"
-  },
-
-  "redirectButton": "on the --user-button"
+  "linkedIn": "https://www.linkedin.com/in/madi-pereira"
 }

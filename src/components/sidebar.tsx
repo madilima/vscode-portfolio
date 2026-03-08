@@ -2,6 +2,7 @@ import classNames from 'classnames'
 import type { Airplay } from 'lucide-react'
 
 import { Dropdown, DropdownItem } from './dropdown'
+import { Pulse } from './pulse'
 
 type IconType = typeof Airplay
 
@@ -9,6 +10,7 @@ type SidebarItem = {
   id: string
   icon: IconType
   isSelected: boolean
+  pulse?: boolean
   onClick?: () => void
   items?: {
     label: string
@@ -32,13 +34,15 @@ export function Sidebar(props: SidebarProps) {
         key={item.id}
         data-active={item.isSelected}
         className={classNames(
-          'flex h-12 items-center justify-center border-transparent border-l-2 data-[active=true]:border-[#E0DEF2]',
+          'relative flex h-12 items-center justify-center border-transparent border-l-2 data-[active=true]:border-[#E0DEF2]',
           {
             'cursor-pointer': !!item.items || !!item.onClick
           }
         )}
         onClick={item.onClick}
       >
+        {item.pulse && <Pulse />}
+        
         <Icon
           data-selected={item.isSelected}
           className={classNames(

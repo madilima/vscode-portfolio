@@ -64,6 +64,7 @@ export function Editor() {
               icon: LucideUser,
               id: 'user',
               isSelected: false,
+              pulse: true,
               items: [
                 {
                   label: 'LinkedIn',
