@@ -1,6 +1,7 @@
 import { useStore } from '@tanstack/react-store'
 import { LucideMoreHorizontal } from 'lucide-react'
 import { useState } from 'react'
+import { useTranslation } from 'react-i18next'
 
 import { appStore } from '../lib/app-store'
 import { closeFile } from '../utils/close-file'
@@ -9,6 +10,8 @@ import { Folder } from './folder'
 import { Section } from './section'
 
 export function Explorer() {
+  const { t } = useTranslation()
+
   const [isOpenEditorsOpen, setIsOpenEditorsOpen] = useState(true)
   const [isProjectOpen, setIsProjectOpen] = useState(true)
 
@@ -31,6 +34,18 @@ export function Explorer() {
     store => store.isExplorerCollapsed
   )
 
+  function getFolderLabel(folderName: string) {
+    if (folderName === 'About') {
+      return t('explorer.folders.about')
+    }
+
+    if (folderName === 'Projects') {
+      return t('explorer.folders.projects')
+    }
+
+    return folderName
+  }
+
   if (isExplorerCollapsed) {
     return null
   }
@@ -38,14 +53,14 @@ export function Explorer() {
   return (
     <div className="w-64 border-zinc-700 border-r px-2 py-2 text-[#8F8CA8]">
       <strong className="flex items-center justify-between pl-2 font-medium text-xs">
-        EXPLORER
+        {t('explorer.title').toUpperCase()}
         <LucideMoreHorizontal size={16} className="mr-2" />
       </strong>
       <nav className="mt-4 flex flex-col">
         <Section
           isOpen={isOpenEditorsOpen}
           onOpenChange={setIsOpenEditorsOpen}
-          title="Open editors"
+          title={t('explorer.openEditors')}
         >
           {openFiles.map(file => (
             <File
@@ -75,7 +90,8 @@ export function Explorer() {
                     })
                   }))
                 }))
-              } }/>
+              }}
+            />
           ))}
         </Section>
 
@@ -88,7 +104,7 @@ export function Explorer() {
             <Folder
               key={folder.name}
               isOpen={folder.isOpen}
-              name={folder.name}
+              name={getFolderLabel(folder.name)}
               onOpenChange={isOpen => {
                 appStore.setState(prev => ({
                   ...prev,

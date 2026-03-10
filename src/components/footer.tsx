@@ -1,7 +1,10 @@
 import { slateDark } from '@radix-ui/colors'
 import { Github } from 'lucide-react'
+import { useTranslation } from 'react-i18next'
 
 export function Footer() {
+  const { t } = useTranslation()
+
   return (
     <div
       style={{ background: slateDark.slate4 }}
@@ -12,7 +15,7 @@ export function Footer() {
         className="flex items-center gap-1 text-xs hover:text-[#E0DEF2]"
       >
         <Github size={12} />
-        GitHub
+        {t('footer.github')}
       </a>
     </div>
   )

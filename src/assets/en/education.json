@@ -1,0 +1,70 @@
+{
+  "university": [
+    {
+      "name": "UNISINOS",
+      "course": "Systems Analysis and Development",
+      "conclusion": "expected in july 2027"
+    },
+    {
+      "name": "UNISINOS",
+      "course": "Administration",
+      "conclusion": "finished"
+    }
+  ],
+
+  "courses": {
+    "certifications": [
+      {
+        "name": "Full Stack Developer",
+        "institution": "Rocketseat",
+        "technologies": ["ReactJS", "ExpressJS", "Typescript", "Prisma"]
+      },
+      {
+        "name": "React Developer",
+        "institution": "Rocketseat",
+        "technologies": ["ReactJS", "Redux"]
+      },
+      {
+        "name": "Database Administrator",
+        "institution": "Udemy",
+        "technologies": ["SQL", "MySQL"]
+      },
+      {
+        "name": "Java Developer",
+        "institution": "Rocketseat",
+        "technologies": ["Java", "Spring"]
+      }
+    ],
+
+    "language": [
+      {
+        "name": "ENGLISH",
+        "proficiency": "C2",
+        "institution": "Eagle Language School"
+      },
+      {
+        "name": "SPANISH",
+        "proficiency": "B1",
+        "institution": "Eagle Language School"
+      }
+    ],
+
+    "currentCourses": [
+      {
+        "name": "Angular Developer",
+        "institution": "Rocketseat",
+        "technologies": ["Angular", "RxJS"]
+      },
+      {
+        "name": "C# Developer",
+        "institution": "Rocketseat",
+        "technologies": ["C#", "ASP.NET"]
+      },
+      {
+        "name": "Data Analytics",
+        "institution": "Rocketseat",
+        "technologies": ["Python", "SQL"]
+      }
+    ]
+  }
+}

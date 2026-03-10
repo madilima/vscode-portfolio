@@ -2,6 +2,7 @@ import { useStore } from '@tanstack/react-store'
 import {
   Github,
   Instagram,
+  Languages,
   Linkedin,
   LucideBug,
   LucideCog,
@@ -15,8 +16,9 @@ import {
   Mail,
   MessagesSquare
 } from 'lucide-react'
+import { useTranslation } from 'react-i18next'
 
-import { appStore } from '../lib/app-store'
+import { type AppLanguage, appStore, setAppLanguage } from '../lib/app-store'
 import { Code } from './code'
 import { Explorer } from './explorer'
 import { Footer } from './footer'
@@ -26,6 +28,13 @@ import { Tabs } from './tabs'
 import { WindowFrame } from './window-frame'
 
 export function Editor() {
+  const { i18n, t } = useTranslation()
+
+  function handleLanguageChange(language: AppLanguage) {
+    setAppLanguage(language)
+    void i18n.changeLanguage(language)
+  }
+
   const currentFile = useStore(appStore, store => {
     return store.folders
       .flatMap(folder => folder.files)
@@ -67,7 +76,7 @@ export function Editor() {
               pulse: true,
               items: [
                 {
-                  label: 'LinkedIn',
+                  label: t('profile.linkedin'),
                   icon: Linkedin,
                   onClick: () =>
                     window.open(
@@ -76,32 +85,49 @@ export function Editor() {
                     )
                 },
                 {
-                  label: 'GitHub',
+                  label: t('profile.github'),
                   icon: Github,
                   onClick: () =>
                     window.open('https://github.com/madilima', '_blank')
                 },
                 {
-                  label: 'Whatsapp',
+                  label: t('profile.whatsapp'),
                   icon: MessagesSquare,
                   onClick: () =>
                     window.open('https://whatsa.me/5551999040062', '_blank')
                 },
                 {
-                  label: 'Email',
+                  label: t('profile.email'),
                   icon: Mail,
                   onClick: () =>
                     window.open('mailto:madulpereira28@gmail.com', '_blank')
                 },
                 {
-                  label: 'Instagram',
+                  label: t('profile.instagram'),
                   icon: Instagram,
                   onClick: () =>
                     window.open('https://www.instagram.com/m_itsm3/', '_blank')
                 }
               ]
             },
-            { icon: LucideCog, id: 'settings', isSelected: false }
+            {
+              icon: LucideCog,
+              id: 'settings',
+              isSelected: false,
+              pulse: true,
+              items: [
+                {
+                  label: t('language.portuguese'),
+                  icon: Languages,
+                  onClick: () => handleLanguageChange('pt')
+                },
+                {
+                  label: t('language.english'),
+                  icon: Languages,
+                  onClick: () => handleLanguageChange('en')
+                }
+              ]
+            }
           ]}
         />
 

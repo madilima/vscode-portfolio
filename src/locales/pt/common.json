@@ -1,0 +1,24 @@
+{
+  "explorer": {
+    "title": "Explorador",
+    "openEditors": "Editores abertos",
+    "folders": {
+      "about": "Sobre",
+      "projects": "Projetos"
+    }
+  },
+  "footer": {
+    "github": "GitHub"
+  },
+  "profile": {
+    "linkedin": "LinkedIn",
+    "github": "GitHub",
+    "whatsapp": "WhatsApp",
+    "email": "Email",
+    "instagram": "Instagram"
+  },
+  "language": {
+    "portuguese": "Português",
+    "english": "Inglês"
+  }
+}
