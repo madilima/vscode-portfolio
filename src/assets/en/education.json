@@ -38,18 +38,18 @@
 
     "language": [
       {
-        "name": "ENGLISH",
+        "name": "English",
         "proficiency": "C2",
         "institution": "Eagle Language School"
       },
       {
-        "name": "SPANISH",
+        "name": "Spanish",
         "proficiency": "B1",
         "institution": "Eagle Language School"
       }
     ],
 
-    "currentCourses": [
+    "current_courses": [
       {
         "name": "Angular Developer",
         "institution": "Rocketseat",

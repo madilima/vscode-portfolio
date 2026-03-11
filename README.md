@@ -1,4 +1,5 @@
-# React + TypeScript + Vite
+# Personal portfolio vscode
+
 
 <p align="center">
 Web project of a personal portfolio
@@ -19,6 +20,6 @@ This project was developed using the following technologies:
 
 ## Project
 
-- The project is a personal portfolio.
+- Personal portfolio inspired by vscode asthetics, showcasing projects and skills with a unique design.
 
 - oneko(cat): reference: github.com/NeonGamerBot-QK

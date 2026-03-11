@@ -26,15 +26,32 @@ code {
   counter-increment: step 0;
 }
 
-code .line::before {
-  content: counter(step);
-  counter-increment: step;
-  width: 1rem;
-  margin-right: 1.5rem;
-  display: inline-block;
-  text-align: right;
-  color: #8f8ca8;
-}
 .invisible-scrollbar::-webkit-scrollbar {
   display: none;
+}
+
+pre {
+	@apply rounded-md pl-9;
+}
+
+pre code {
+	@apply block leading-tight p-2 pl-1;
+	font-size: 16px;
+	counter-reset: step;
+	counter-increment: step 0;
+}
+
+pre code .line {
+	@apply relative;
+  white-space: pre-wrap;
+}
+
+pre code .line::before {
+	@apply absolute overflow-hidden w-8 h-4 -left-9 top-0;
+  text-align: right;
+	content: counter(step);
+	counter-increment: step;
+	color: #8f8ca8;
+	padding-left: 8px;
+  padding-right: 8px;  
 }

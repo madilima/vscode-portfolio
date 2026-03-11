@@ -2,13 +2,13 @@
   "university": [
     {
       "name": "UNISINOS",
-      "course": "Analise e Desenvolvimento de Sistemas",
-      "conclusion": "previsao de conclusao em julho de 2027"
+      "course": "Análise e Desenvolvimento de Sistemas",
+      "conclusion": "previsão de conclusão em julho de 2027"
     },
     {
       "name": "UNISINOS",
-      "course": "Administracao",
-      "conclusion": "concluido"
+      "course": "Administração",
+      "conclusion": "concluído"
     }
   ],
 
@@ -38,18 +38,18 @@
 
     "language": [
       {
-        "name": "INGLES",
+        "name": "Inglês",
         "proficiency": "C2",
         "institution": "Eagle Language School"
       },
       {
-        "name": "ESPANHOL",
+        "name": "Espanhol",
         "proficiency": "B1",
         "institution": "Eagle Language School"
       }
     ],
 
-    "currentCourses": [
+    "current_courses": [
       {
         "name": "Desenvolvedor Angular",
         "institution": "Rocketseat",
@@ -61,7 +61,7 @@
         "technologies": ["C#", "ASP.NET"]
       },
       {
-        "name": "Analise de Dados",
+        "name": "Análise de Dados",
         "institution": "Rocketseat",
         "technologies": ["Python", "SQL"]
       }

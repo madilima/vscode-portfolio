@@ -52,7 +52,7 @@
   },
   {
     "name": "VSCODE PORTFOLIO",
-    "description": "",
+    "description": "Portifolio pessoal inspirado na estetica do vscode, apresentando projetos e habilidades com um design unico.",
     "technologies": ["TypeScript", "ReactJS", "Tailwind CSS"],
     "source": "https://github.com/madilima/vscode-portfolio",
     "url": "https://madu.dev"

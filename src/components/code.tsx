@@ -20,13 +20,13 @@ export function Code(props: CodeProps) {
       }
 
       const highlighter = await getSingletonHighlighter({
-        themes: ['github-dark'],
+        themes: ['github-dark-dimmed'],
         langs: [language]
       })
 
       const code = highlighter.codeToHtml(content, {
         lang: language,
-        theme: 'github-dark'
+        theme: 'github-dark-dimmed'
       })
 
       setProcessedCode(code)
@@ -36,7 +36,7 @@ export function Code(props: CodeProps) {
   }, [content, language])
 
   return (
-    <div className="relative flex flex-1 grow bg-[#24292e]">
+    <div className="relative flex flex-1 grow bg-[#23262F]">
       <div
         id="shiki-code"
         dangerouslySetInnerHTML={{ __html: processedCode }}
