@@ -55,3 +55,7 @@ pre code .line::before {
 	padding-left: 8px;
   padding-right: 8px;  
 }
+
+code :any-link {
+  @apply hover:text-purple-400 underline underline-offset-2 transition-colors;
+}

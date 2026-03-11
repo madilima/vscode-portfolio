@@ -1,3 +1,4 @@
+import autolinks from '@jcayzac/shiki-transformer-autolinks'
 import { useEffect, useState } from 'react'
 import { getSingletonHighlighter } from 'shiki'
 
@@ -26,7 +27,8 @@ export function Code(props: CodeProps) {
 
       const code = highlighter.codeToHtml(content, {
         lang: language,
-        theme: 'github-dark-dimmed'
+        theme: 'github-dark-dimmed',
+        transformers: [autolinks ()]
       })
 
       setProcessedCode(code)

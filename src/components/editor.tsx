@@ -1,5 +1,6 @@
 import { useStore } from '@tanstack/react-store'
 import {
+  FileUser,
   Github,
   Instagram,
   Languages,
@@ -107,6 +108,18 @@ export function Editor() {
                   icon: Instagram,
                   onClick: () =>
                     window.open('https://www.instagram.com/m_itsm3/', '_blank')
+                },
+                {
+                  label: t('profile.resume'),
+                  icon: FileUser,
+                  onClick: () =>
+                   {
+                    if (i18n.language === 'pt') {
+                      window.open('/resume_pt.pdf', '_blank') 
+                    } else {
+                      window.open('/resume_en.pdf', '_blank')
+                    }
+                   }
                 }
               ]
             },
